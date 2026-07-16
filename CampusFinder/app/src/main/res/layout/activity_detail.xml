@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="32dp">
+
+            <ImageView
+                android:id="@+id/img_detail_photo"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/uny_campus_main"
+                android:contentDescription="Foto Detail Lokasi" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tv_detail_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Lokasi Lengkap"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#00509F" /> <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Tentang Lokasi"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#555555"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Deskripsi panjang mengenai lokasi ini akan ditampilkan di sini. Informasi mencakup fungsi gedung, jam operasional, atau fakta menarik lainnya."
+                    android:textSize="16sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_open_maps"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Buka di Google Maps"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="30dp"
+                    app:icon="@android:drawable/ic_dialog_map"
+                    app:iconGravity="textStart"
+                    android:backgroundTint="@color/blue" /> </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_circle_translucent"
+        android:src="@drawable/ic_arrow_back"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        app:tint="@android:color/white"
+        android:contentDescription="Kembali" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_favorite_border"
+        app:backgroundTint="@android:color/white"
+        app:tint="@android:color/darker_gray"
+        android:contentDescription="Simpan Lokasi" />
+</FrameLayout>
